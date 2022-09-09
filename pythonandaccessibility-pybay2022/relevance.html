@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,30 @@
     <link href="../style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <p><a href="../index.html">home</a> <a href="index.html"> Python and Accessibility </a></p>
     <h1> Relevance to Python </h1>
+    <h2> Building GUIs with Python? </h2>
     <ul>
-        <li>Okay, Python isn't very popular for building UIs </li>
-        <li>Though, with frameworks like Django, Flask, and simlar others, there's plenty of HTML being served probably via rendering templates</li>
-        <lie>And there are existing packages to build UIs in Python, making those UIs accessible is a struggle at best</lie>
+        <li> According to the <a href="https://lp.jetbrains.com/python-developers-survey-2021/"> PSF and JetBrains 2021 survey of Python developers </a>,
+            there's not a lot of desktop and mobile GUI development being done by Python developers.</li>
+        <ul>
+            <li>Why that's the case might be a good topic for a longer talk, maybe it's the packaging?</li>
+            <li>Projects like <a href="https://beeware.org/"> BeeWare </a>, addressing packaging and 
+                enabling building desktop and mobile apps in Python using platform native components, 
+                might be a game changer. </li>
+        </ul>
+        <li>Also according to the survey, there is a lot of web development done in Python, 
+            with 60%+ of Python devs also using JavaScript, HTML, and CSS.  </li>
+        <ul><li>I suspect that means there is a lot of web content created by Python developers.</li></ul>
+        <li>And now with <a href="https://webassembly.org/"> Web Assembly (Wasm) </a>,
+        <a href="https://pyodide.org/en/stable/"> Pyodide </a>, and 
+    <a href="https://pyscript.net/"> PyScript </a>, Python bursts forth into web content development! </li>
+    <ul><li>and those technologies will inevitably show up in
+        <a href="https://www.electronjs.org/"> Electron </a> and <a href="https://tauri.app/"> Tauri </a>. </li></ul>
     </ul>
-    <h2>Cool New Options for 'building UIs in Python</h2>
-    <ul>
-        <li>BeeWare - cross platform desktop and mobile apps using native components</li>
-        <li>Flet - also cross platform desktop and mobile based on Flutter </li>
-        <li> PyScript - running Python in the browser using WASM, maybe can use it in Electron or Tauri eventually as well</li>
-    </ul>
-    <h2>The Future has Potential </h2>
-    <ul>
-        <li>For BeeWare, Using native components is a great start toward achieving accessibility </li>
-        <li>For PyScript, accessibility is fairly well understood in the browser (there are issues, that's a different talk)</li>
-        <li>Frameworks can encapsulate many details of accessibility.  Developers will still need to understand the ideas though and be aware of what is and isn't provided by the frmework</li>
-    </ul>
-    <p> <a href="whatis.html"> back, What is Accessibility?</a> <a href="standards.html"> next, Standards and Guidelines </a> </p>
+    <p> <a href="tools.html"> back, Some Tools for Accessibility?</a> <a href="standards.html"> next, Standards and Guidelines </a> </p>
 </body>
+
 </html>
