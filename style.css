@@ -9,20 +9,21 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h2 {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 h3 {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 p, li {
-  max-width: 40em;
-  margin: 2em 0;
+  font-size:1.4em;
+  max-width: 60em;
+  margin: 1em 0;
 }
 
 #gotoMain {
