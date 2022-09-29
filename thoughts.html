@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts, on Joel's Static Site</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <h1>A Place to Record Some Thoughts</h1>
+        <p> I'm starting this as I'm back in the process of finding a new job.
+            My ideal role is a combination of technical leadership, management, and hands on development.
+            The proportions of those items are not fixed in my mind and are realistically fluid in any role.
+            Of course I want to avoid situations where the expectations turn out to be 70% of my time on each area.
+            But I digress...
+        </p>
+        <p> I've been thinking for a while I should keep track of my thoughts.
+            While preparing for <a href="pythonandaccessibility-pybay2022/index.html">my Python and Accessibility talk at PyBay</a>,
+            I started using github pages.
+            I quickly realized a static site I don't run or pay for is a great place to quickly jot down some thoughts and push them to the public.
+            Also, I listen to technology related podcasts, videos, and books, with many accomplished people sharing their wisdom not just about tech, but life in general.
+            I'll use this page to remind myself of some of their points with links to the sources, and maybe I'll review these notes sometimes and have an epiphany.
+            And maybe others will find some value in here.
+        </p>
+        <p> as I think more about this, what I'm starting is a blog site in an HTML file on a static site platform.
+            Maybe that's a bad idea, there are so many options for creating articles, why an HTML file on github.io?
+            I guess because I want to.
+            Being blind, WYSIWYG has little interest to me.
+            And writing in pure HTML and CSS gives me as much control as I want.
+            And I"m thinking how I could write yet another static site content generator, but what would be easier than writing HTML/CSS in VS Code, git commit -a, and git push?
+        </p>
+        <p> So, especially for my fellow screen reader users, here's a bit about the structure of this file:
+        </p>
+        <ul>
+            <li>Each article will start with an h2 heading with an id attribute to support links directly to the article.</li>
+            <li>The articles will be within an article element, the h2 headings will be a direct descendent of the article.</li>
+            <li>after the heading will be two dates, in time elements, when I initially posted the article and the last time it was updated.</li>
+            <li>This being a static site/page, the order of the articles will not change based on last day updated.</li>
+            <li>The Table of Contents below should jump you to the listed article, only h2 headings are in the ToC.</li>
+            <li>Articles will have sub-headings as any article should.</li>
+        </ul>
+
+        <h2 id="toc">Table of Contents</h2>
+        <ul aria-labelledby="toc">
+            <li><a href="#h2-interviewing">Interviewing</a></li>
+        </ul>
+        <article id="article-interviewing">
+            <h2 id="h2-interviewing">Interviewing</h2>
+            <p>Posted <time datetime="2022-09-29">2022-09-29</time>; Updated <time datetime="2022-09-29">2022-09-29</time></p>
+            <p>Just what the world has been waiting for, another article on interviewing.
+                There's a twist to this article though, it's all about me, yay.
+                Well, more that it is motivated by my experiences and focused on interviewing for software development roles.
+                I'm writing this as I'm preparing to interview for technical lead / hands on management roles.
+            </p>
+            <h3>Most Important: Be Concise!!</h3>
+            <p> I start with this point because I suspect it is where I have failed the most.
+                The ability to clearly and quickly articulate the important points of a story can be paramount to success in your interview.
+                Don't ramble.
+                Unless specifically asked, details of the data structures you used in your last project, for example, are not necessary information.
+                And once you realize you are rambling, wrap it up ASAP.
+                This is why practice is so important.
+            </p>
+            <p> There is a balancing act though.
+                Know the difference between clear and concise and too brief.
+                For example, if asked to describe a time you faced conflict and how it was resolved, an answer of,
+                <q>another developer and I disagreed on which database to use. I explained why my choice was better and we went with that.</q>
+                is almost certainly insufficient.
+            </p>
+            <h4><a href="https://www.themuse.com/advice/star-interview-method"> The STAR Method</a></h4>
+            <p>If you've done any reading on interviewing, you've likely read about
+                <a href="https://www.vawizard.org/wiz-pdf/STAR_Method_Interviews.pdf"> the STAR method (pdf)</a>.
+                <em style="font-size:.9em">Note: the two STAR method links are to different sources. I liked each description, it wouldn't hurt to read both.</em>
+                I'm not going to describe the STAR method (see the links above), but let's look at how one might frame the example above using the method.
+            </p>
+            <ul>
+                <li><b>S: Situation</b> -
+                    My colleague and I were developing a new feature on our existing platform. I was the more senior developer thus responsible for the overall success of the feature implementation.
+                    The feature would generate new data on the platform while also depending on existing data.
+                    My colleague and I disagreed, somewhat strongly, on how to manage the new data.
+                    Having many more years of platform development, I think I had a deeper appreciation for the long term impact of changes, especially adding new components to a system.
+                </li>
+                <li><b>T: Task</b> -
+                    We needed to resolve this issue and move quickly to development.
+                    I needed to balance the goals of developing a long term sustainable solution with the desire to mentor and encourage my colleague.
+                </li>
+                <li><b>A: Action</b> -
+                    I arranged for us to have a design session where we could enumerate the pros and cons of each solution and consider alternatives.
+                    I suggested we prepare by listing pros and cons of both our preferred solution and the other's proposal.
+                    The goal was for both of us to consider the other's perspective.
+                </li>
+                <li><b>R: Resolution</b> -
+                    The meeting went well though the technical debate was sometimes intense.
+                    We landed on a solution with elements of each of our solutions.
+                    We were also able to have an honest discussion of how hard it is to not be personally attached to one's own solution, and how that might cloud one's judgement.
+                    I like to think we both came away from that experience with deeper trust and appreciation for each other.
+                    I can go into details of the proposed and combined solutions if you'd like.
+                </li>
+            </ul>
+            <p> This is a contrived example though has elements of past experiences.
+                My goal was to showcase honesty, maturity, empathy, and leadership skills.
+                And, of course, brevity yet completeness.
+                STAR stories are not the place to showcase technical prowess, the interviewer will ask technical questions if/when it's appropriate.
+            </p>
+            <p>
+                I would have been tempted to explain more of the proposed solutions or the combined solution.
+                For example, < q>... the new data was a good fit for a document model thus my colleague wanted to use MongoDB.
+                    Each document though would need the customer ID which was already stored in PostgreSQL.
+                    We would have to deploy and manage Mongo, a non trivial task especially considering we'd have to do it as a geographically distributed replica set.
+                    Plus we would have to manually address data integrity situations like deleting all the documents in mongo if the customer was deleted in postgres ....8- </q>
+            </p>
+            <p> I cringe as I type this recalling past interviews where I did almost exactly what I'm describing.
+                It's hard when you want to geek out on something even knowing it's not the right time or place.
+                Notice the last line in the Resolution part.
+                Offer to give more details and let the interviewer decide how much to geek out.
+            </p>
+            <h3> Questions I'd Ask the Interviewer</h3>
+            <p>Now it's your turn to ask questions.</p>
+            <p> Of course you've done your homework and read through the company's website and LinkedIn posts.
+                And you've read through the job description and a few other similar sounding jobs.
+                And if the company has a service with a trial or free tier, you've signed up and tried it.
+                With all that research, you must have found something you'd like to understand better about the company.
+            </p>
+            <p>The point is to be interested in the company and the job.
+                Maybe don't pour it on so thick it sounds disingenuous.
+                And if you are disingenuous, maybe that's not the right place for you.
+                Though maybe there aren't a lot of options and you need the work, there's nothing wrong with that.
+                More digressions, I'm going to go review my notes about the STAR process and stop this rambling.
+            </p>
+            <p>To the point. Here's a list of questions loosely grouped.</p>
+            <ul>
+                <li><b>Questions regarding the company</b> -
+                    Unless you know people in the company, you're going to want to get a sense of how the company operates.
+                    This is helpful to you and also conveys the idea you consider topics like corporate culture important.
+                    If you're interviewing at a very large company with many divisions, these questions would apply to the division.
+                    Different divisions within the same company can have very different structures/culture.
+                    <UL>
+                        <li>Would you describe the company culture as collaborative? Is executive leadership intentional about setting corporate culture?</li>
+                        <li>What is the process for deciding what to build and how to build it? Which organizations are involved in that process?</li>
+                        <li>Are people encouraged to try new ideas to learn and supported in failure?</li>
+                        <li>How are teams within development structured? For example, is there a separate quality engineering team?</li>
+                        <li>Do all teams in engineering follow the same processes or are teams encouraged to set their own?</li>
+                    </UL>
+                </li>
+                <li><b>Questions for the hiring manager</b> -
+                    The questions above regarding the company can be asked to anyone, though more appropriate for more senior people.
+                    If you get a chance to talk to multiple people at different levels of seniority, it's good to ask similar questions and gauge the consistency of their replies.
+                    The following questions are probably best for the hiring manager, or maybe the hiring manager's manager.
+                    <ul>
+                        <li>From the list of requirements for this role, which two or three are the most important? </li>
+                        <li>How do you describe your management style?</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Wrap It up</h3>
+            <p> I think I've hit the high points, and I want to go work on other stuff.
+                Probably the overall theme of interviewing well is be curious, be authentic, and be concise.
+                Just as important, be ready to learn from your own mistakes but don't be too hard on yourself.
+                I've finished interviews thinking, ugh, that was a disaster.
+                I've also finished thinking, hmm, that went well.  Then I hear back they're not going to continue the process.
+                Every interview is a learning opportunity.
+                The better you can honestly reflect, internalize, and learn, the better you will interview going forward. 
+            </p>
+            <p> Good luck and don't burn out.
+                It's okay to do something entirely different for a while after reading that email about it not being a great fit, blah blah blah.
+                Don't let that break be too long though.
+                Something else always comes up.
+                Be patient, and be ready.
+            </p>
+        </article>
+    </main>
+</body>
+
+</html>
