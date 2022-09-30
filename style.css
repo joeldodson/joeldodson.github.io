@@ -26,6 +26,10 @@ p, li {
   margin: 1.5em 0;
 }
 
+.navlinks, .publishtime {
+  font-size:.8em
+
+}
 #gotoMain {
   display: none;
 }
