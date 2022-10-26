@@ -20,7 +20,7 @@ h3 {
   margin: 1.5em 0;
 }
 
-p, li {
+code, p, li {
   font-size:1.2em;
   max-width: 40em;
   margin: 1.5em 0;

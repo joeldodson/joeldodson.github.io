@@ -21,18 +21,39 @@
             It might be many of these commands I now recall easily but keep them here in case others have stumbled across this resource and found it helpful.
             That's the story I'm going with.
         </p>
-        <h2>Docker</h2>
+        <h2 id="docker-cli">Docker</h2>
         <p><b>Note on accessibility of the docker descktop dashboard</b> - the tab order appears to be out of whack.
             As I was tabbing through, I heard in wht sounded like the middle of the app three unlabeled buttons.
             I was told those are the close, minimize, and maximize buttons on the window.
             Your situation might be different, but if you find threee unlabeled buttons in what sounds like the middle of the dashboard, and all other buttons sound fine,
             it might be okay to simply ignore those.
-            Keep in mind Im using NVDA on Windows 11.  And this is Docker Desktop connected to hub version 4.12.0.
+            Keep in mind Im using NVDA on Windows 11. And this is Docker Desktop connected to hub version 4.12.0, and I'm writing this in October, 2022.
+        </p>
+        <p>Check out the
+            <a href="https://docs.docker.com/engine/reference/commandline/cli/">online documentation for the complete Docker CLI</a>
         </p>
         <ul aria-label="Docker commands">
-            <li><b>docker run -rm hello-world</b> -
+            <li><b>docker run --rm hello-world</b> -
                 simple command to make sure docker has been installed and is running correctly.
             </li>
+            <li><b>docker pull nginx:stable</b> - pull down the image for nginx with the tag stable.
+                Defaults to tag==latest
+            </li>
+            <li><b>docker image ls</b> - list all local images.</li>
+            <li><b>docker run -p 8080:80 -d nginx</b> - run nginx image using port 80 in the container and port 8080 on the hos.
+                So I access nginx from a local browser using localhost:8080.
+                The '-d' is to run the container in the background, default is run in the foreground (then you loose your prompt).
+            </li>
+            <li><b>docker ps</b> - show all running containers.
+                Add "-a" to see all containers regardless of state.
+            </li>
+            <li><b>docker stop <container id or name></b> - stop a container. Can also "kill" a container.</li>
+            <li><b>docker rm Ncontainer id or name></b> - remove the container from the file system.</li>
+        </ul>
+        <h2>WSL - Windows Subsystem for Linux</h2>
+        <ul aria-label="WSL">
+            <li><b>wsl --set-default-version 2</b> - make sure all distros use wsl2 by default</li>
+            <li><b>wsl -l -v</b> - list of all running distros including state and version </li>
         </ul>
 
     </main>

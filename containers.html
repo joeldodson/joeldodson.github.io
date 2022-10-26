@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Containers and Related Technologies </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <p class="navlinks"><a href="index.html">JSS</a></p>
+        <h1>Containers and Related Technologies</h1>
+        <p>NOTE: I have <a href="commands.html#docker-cli">notes on using the docker CLI</a> elsewhere so don't plan to discuss the docker CLI here.</p>
+        <h2>Getting Started</h2>
+        <p>First, the chicken and/or the egg?
+            Knowing domain terminology is critical to learning a domain.
+            However, it's also good to get a little experience in a domain before digging into possibly more academic concerns.
+            This <a href="https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction">RedHat article on Practical Introduction to Container terminology</a>
+            is nicely broken into sections initially introducing basic terminology and providing more advanced topics further down.
+            You might want to read through the first section to at least understand the difference between an image and container before going to deep into docker tutorials.
+            There are also links to much more detailed information in the article, you could get very deep, very quickly.
+            You might want to save that for later. But remember it's there and review the definitions occasionally.
+        </p>
+        <p>Speaking of learning the basics, I initially looked for books (on bookshare.org) for docker introductions.
+            I didn't find anything as good as the <a href="https://docs.docker.com/">docker documentation</a>.
+            If you've already installed Docker Desktop and setup an account on Docker Hub, you might want to jump in to the getting started tutorial.
+            Docker even has an image ready to go with the getting-started tutorial.
+        </p>
+        <p> After running the following command:
+            <br>
+            <code> &gt; docker run -dp 80:80 --name docker-getting-started-tutorial docker/getting-started </code>
+            </br>
+            Type "localhost" into your browser's address bar and you should be in the getting started tutorial.
+            Note that I added the "--name" argument as I prefer to give containers names so I don't have to find the container id.
+        </p>
+        <h3>What are containers?</h3>
+        <p> Containers seem to be based on three core technologies (these links are ones I found useful in trying to learn this tech myself):
+        <ul>
+            <li><b>Linux Name Spaces</b> -
+                I learned a lot about name spaces from
+                <a href="https://www.redhat.com/sysadmin/7-linux-namespaces">this RedHat article on the 7 most used Linux name spaces</a>.
+                And there are plenty of links to go as deep as you're willing on name spaces and containers.
+            </li>
+            <li><b>chroot (change root)</b> -
+                The chroot command dates back to original UNIX (see the
+                <a href="https://en.wikipedia.org/wiki/Chroot">Wikipedia article on chroot</a>).
+                It arguably provides some sort of isolation in which to run a process, but no real security.
+                It's foundational to containers but far from the same thing.
+                There is some good discussion regarding the difference between docker and simple chroot at this
+                <a href="https://devops.stackexchange.com/questions/2826/difference-between-chroot-and-docker">post on Dev Ops StackExchange </a>.
+            </li>
+            <li><b>cgroups (control groups)</b> -
+                Control groups are another kernel feature used to isolate processes.
+                These are used to control to which system resources a process or set of processes has access.
+                This <a href="https://www.nginx.com/blog/what-are-namespaces-cgroups-how-do-they-work/">blog post from Nginx regarding name spaces and control groups</a>
+                goes into nice details on both technologies.
+            </li>
+        </ul>
+        </p>
+        <h3>More Container Reading</h3>
+        <p> Here are a few more links I found interesting.
+            I'll start with a few and maybe add more as I dig in to details.
+        </p>
+        <ul>
+            <li><b><a href="https://opencontainers.org/">Open Container Initiative (OCI)</a></b> -
+                The OCI is an organization formed to create and maintain specifications around container technologies.
+                The idea is companies can write to the specifications and everything will interoperate.
+            </li>
+            <li><b><a href=https://www.nginx.com/blog/building-smaller-container-images/">Building smaller container images</a></b> -
+                Another Nginx blog post (along with the name spaces and control groups) regarding why and how to build smaller images.
+            </li>
+        </ul>
+
+        <h2>Container Orchestration</h2>
+        <p> To get started, read this
+            <a href="https://www.redhat.com/en/topics/containers/what-is-container-orchestration">blog post from RedHat answering the question, "what is container orchestration?"</a>
+        </p>
+        <p> As much as people probably think docker when thinking of containers,
+            <a href="https://kubernetes.io/">kubernetes </a>
+            (AKA, 'k8s', because 'kubernetes' starts with 'k', ends with 's', and has 8 letters in between)
+            dominates the container orchestration domain.
+        </p>
+        <p>With that in mind, this section is intentionally very short.
+            If you'll be supporting some application using containers to build out a distributed system possibly consisting of (too) many micro services,
+            you'll almost certainly need to know about kubernetes.
+            There is plenty out there already, no need for me to add more noise.
+        </p>
+        <p> On the other hand, if you need to spin up a few services for local development,
+            e.g., postgres for development data and redis for a local key value store,
+            you probably want to use something like docker compose.
+            If you haven't already, go back to the getting started section and run through the docker getting started tutorial.
+            The tutorial shows how to configure and run multiple containers locally using docker-compose.
+        </p>
+    </main>
+</body>
+
+</html>
