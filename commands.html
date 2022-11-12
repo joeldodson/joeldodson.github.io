@@ -55,6 +55,23 @@
             <li><b>wsl --set-default-version 2</b> - make sure all distros use wsl2 by default</li>
             <li><b>wsl -l -v</b> - list of all running distros including state and version </li>
         </ul>
+        <h2>ssh</h2>
+        <ul>
+            <li><b>ssh-keygen -t ed25519</b> -
+                ed25519 is the preferred digital signature algorithm type.
+            </li>
+            </li>
+            <li><b><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">Configuring ssh keys on Ubuntu 20.04</a></b> -
+            Okay, that's not a command.
+            And it, in theory, is specific to Ubuntu 20.04.
+            In reality it's generic enough at least for getting an ssh key onto your Linux host.
+            The first part suggests to simply use <code>ssh-keygen</code> without any parameteres.
+            That will default to RSA which is probably fine.
+            Use the command above though to use a stronger key.</br>
+            Note that ssh-copy-id doesn't seem to be available yet on Windows 11.
+            I used the second method, cat the key and pipe it to an ssh command and that worked fine from PowerShell 7.
+        </li>
+        </ul>
 
     </main>
 </body>
