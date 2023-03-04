@@ -49,6 +49,8 @@
             </li>
             <li><b>docker stop <container id or name></b> - stop a container. Can also "kill" a container.</li>
             <li><b>docker rm Ncontainer id or name></b> - remove the container from the file system.</li>
+            <li><b>docker run -d -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=todos --name mysql mysql:stable </b> -
+                start a stable image of the mysql database passing in environmental variables.</li>
         </ul>
         <h2>WSL - Windows Subsystem for Linux</h2>
         <ul aria-label="WSL">
@@ -62,15 +64,15 @@
             </li>
             </li>
             <li><b><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04">Configuring ssh keys on Ubuntu 20.04</a></b> -
-            Okay, that's not a command.
-            And it, in theory, is specific to Ubuntu 20.04.
-            In reality it's generic enough at least for getting an ssh key onto your Linux host.
-            The first part suggests to simply use <code>ssh-keygen</code> without any parameteres.
-            That will default to RSA which is probably fine.
-            Use the command above though to use a stronger key.</br>
-            Note that ssh-copy-id doesn't seem to be available yet on Windows 11.
-            I used the second method, cat the key and pipe it to an ssh command and that worked fine from PowerShell 7.
-        </li>
+                Okay, that's not a command.
+                And it, in theory, is specific to Ubuntu 20.04.
+                In reality it's generic enough at least for getting an ssh key onto your Linux host.
+                The first part suggests to simply use <code>ssh-keygen</code> without any parameteres.
+                That will default to RSA which is probably fine.
+                Use the command above though to use a stronger key.</br>
+                Note that ssh-copy-id doesn't seem to be available yet on Windows 11.
+                I used the second method, cat the key and pipe it to an ssh command and that worked fine from PowerShell 7.
+            </li>
         </ul>
 
     </main>
