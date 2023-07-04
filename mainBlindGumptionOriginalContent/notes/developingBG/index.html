@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Developing BlindGumption in Notes from BlindGumption</title>
+  <meta charset="utf-8"/>
+  <meta name="description" content="BlindGumption is my journey into blindness, accessibility and developing accessible applications."/>
+</head> 
+<body>
+	<div id="gotoMain"><a href="#mainContent">Go To Main Content</a></div>
+	<header>
+		<em><a href="https://blindgumption.com">BlindGumption</a> is my journey into blindness and accessibility.</em>
+	</header>
+	<nav> 
+		<strong>Main Navigation for BlindGumption</strong>
+		<p> 
+		At some point there should be links here.  
+		For now, follow the links on the page. 
+		</p>
+	</nav> 
+
+	<main id="mainContent" tabindex="-1">
+		<h1>How BlindGumption is Developed and Managed </h1>
+<p>
+This area of BlindGumption contains notes loosely based on the theme of how the 
+BlindGumption site itself was created, how it continues to evolve, and how it is being managed.
+Articles range from the intial creation of the domain and hosts, 
+to how the code is managed and tasks tracked, 
+to deployment of new code and management of the platform. 
+</p>  
+<p>
+Each article will be marked by an h2 heading.  The heading itself is a link to the article.  After the heading is a very brief description of the article.  
+</p>
+<p>
+	The articles are not tutorials. 
+	Each article is intended to address a specific topic or a few closely related topics.
+	Ideally there will be enough links in the article for the reader to follow and learn more about the topic.
+	Hopefully the article with the links and some self motivated searching will lead the reader to a deeper understanding of the topic.
+</p>
+
+<h2>Before You Get Started</h2>
+<p>
+If you plan to use these articles to learn how to build and run something like blindgumption.com, you'll need to have some basic understanding of Linux.  If you are new to this, don't be intimidated.  Linux is just another operating system like Windows or Mac OS.  For these articles though, you will be interfacing with Linux using a command prompt.
+</p>
+<p>
+	  If you need to learn Linux or are looking for a refresher, try this
+	  <a href="https://www.digitalocean.com/community/tutorial_series/getting-started-with-linux">DigitalOcean tutorial on getting started with Linux.</a>
+	  It's a bit old but from what I listened to, it's accurate and a good introduction.
+</p>
+<p>
+	For the tutorial, you'll need a bash shell to practice in.  The tutorial points you to how to create an Ubuntu droplet which seems a little chicken and egg-ish. 
+	If you're on Mac OS, you can use the Terminal program.
+</p>
+<p>
+If you're on Windows, there are a few options.  On Windows 10 2004, build 1941 or later, you can use 
+	<a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL, Windows Subsystem for Linux.</a>
+	Using WSL, you can install a real version of Ubuntu from the Microsoft store.  that will give you an up to date, and accessible bash shell.
+</p>
+<p>
+	If you're on an older version of Windows, try Git Bash.  from 
+	<a href="https://git-scm.com">git-scm</a>
+ download giet for windows.  After installation, from the search in the start menu, type, "Git Bash" and that will start a windows bash shell.
+ I've found WSL to be more accessible than Git Bash (I use NVDA) but Git Bash works okay.  If you start hearing strange stuff after you've been navigating about the terminal to listen to output from previous commands, run the "clear" command to clear the terminal and reset the command line to the top of the terminal.
+</p>
+
+<h2>The Creation Steps are Somewhat Interdependent </h2>
+<p>
+	This section is arranged to highlite the small interdependence between creating the domain and creating the host that will be the webserver.  The domain can be created before the host and vice versa.  The interdependence is the IP address needed to create an 'A' and/or 'AAAA' record in the domain.  There are details in the two creating articles, hopefully it's clear. 
+</p>
+<h3><a href="/notes/developingBG/creatingTheDomain.html">The Creation of the blindgumption.com Domain</a></h3>
+<p>
+this describes the process of getting the domain name blindgumption.com, creating the domain, and pointing it to the correct webserver.
+</p>
+<p>
+	<em>Note:</em>  You don't have to have a domain and URL to access your server.  You can skip this section and simply use an IP address whereever you would otherwise type in the domain name (e.g., in the browser's address bar). 
+</p>
+<p>
+	<em>That said...</em> I recommend getting a domain name and creating your domain.  It's not hard and will make this overall exercise more interesting and more fun than typing an IP address, especially if you want to use IPv6.
+</p>
+
+<h3><a href="/notes/developingBG/creatingTheWS.html">Creating and Configuring the Webserver</a></h3>
+<p>
+	This article contains details of the creation and configuration of the host that is the webserver delivering the content for BlindGumption.
+</p>
+
+	</main>
+	<footer>
+		 <em>Disclaimer: all thoughts, opinions, and attempts at humor on BlindGumption and associated sites are mine.  I do not speak for the blind community. </em>
+		</footer>
+</body>
+</html> 
+
+

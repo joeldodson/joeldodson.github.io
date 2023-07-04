@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Creating the blindgumption.com Webserver in Developing BlindGumption</title>
+  <meta charset="utf-8"/>
+  <meta name="description" content="BlindGumption is my journey into blindness, accessibility and developing accessible applications."/>
+</head> 
+<body>
+	<div id="gotoMain"><a href="#mainContent">Go To Main Content</a></div>
+	<header>
+		<em><a href="https://blindgumption.com">BlindGumption</a> is my journey into blindness and accessibility.</em>
+	</header>
+	<nav> 
+		<strong>Main Navigation for BlindGumption</strong>
+		<p> 
+		At some point there should be links here.  
+		For now, follow the links on the page. 
+		</p>
+	</nav> 
+
+	<main id="mainContent" tabindex="-1">
+		<h1>Creating and Configuring the Initial Webserver for blindgumption.com</h1>
+		<p>
+			We're going to go through several tutorials from DigitalOcean to get the server configured.
+I chose DigitalOcean due to its somewhat accessible user interface.  I say somewhat becuase you have to poke around to find information.  It could be a much better user experience, I have been able to do everything I've needed/wanted to do though and that's much better than some other cloud services (yes, I'm referring to AWS). 
+		</p>
+		<p>
+			I'll avoid going into detail on using the DigitalOcean console.  It appears to be evolving as I'm using it.  I don't recall the changes but do recall thinking they were improvements and I know they're working on accessibility.  Hopefully a future reader here will find DigitalOcean to be a very smooth interface.
+		</p>
+		<p>
+			I will however give a few pointers on the current (Sept 2020) DigitalOcean UI.  Once I log in to my account, I press 'b' to find either the manage or create button, depending on what I need to do. Pressing buttons in DigitalOcean often results in silence.  That generally implies something was opened somwhere and you'll need to find it.
+			For activities like createing or managing droplets or domains, I find pressing '1' to go to the first level header, or 't' to go to the next table will get me where I need to be.    
+		</p>
+
+		<h2>Creating the Initial Server</h2>
+		<p>
+			In DigitalOcean, the virtual machines are called droplets.  To create a droplet, that's right, find the create button.  
+		</p>
+		<p>
+			After pressing create, the link to create a new droplet is (at least as of Sept, 2020) immediately below the button.  Click the link to create a new droplet then find the first header and follow the directions.
+		</p>
+		<p>
+			The creating the droplet UI/UX is by far the worst accessibility experience I've had recently with DigitalOcean.  Though it is possible to select the options you want and end up with a usable droplet.  Be patient and listen carefully. 
+		</p>
+
+		<h3>What Type of Droplet Should I Create? </h3>
+		<p> 
+	 If your new to most of this, I suggest Ubuntu with the lowest resources (CPU, storage, RAM).  It's only $5/month and will be plenty to get going.  Ubuntu is very common so you'll probably find a lot of answers online if/when you run into problems.  blindgumption.com is currently running on Ubuntu 20.04LTS.
+		</p>
+		<p>
+			You'll be asked several questions to create the droplet.  If this is your first time, I suggest don't worry about a backup or extra storage or IPv6.  
+			I chose the SF region since I'm on the West Coast for where to create the droplet.  You might want to choose a region near you.  It only matters in the possible delay between you and the datacenter.
+		</p>
+		<p>
+			Unless you already know about SSH keys, create a root user password which you'll use in subsequent steps.  There's a link further down explaining how to create SSH keys and upload them to your host.
+		</p>
+
+		<h3>What Should My Hostname Be? </h3>
+		<p>
+			If you have already 
+			<a href="/notes/developingBG/creatingTheDomain.html">created a domain</a>, you might want to give your new droplet a name like, "home.mydomain.com" (where, for example, mydomain.com is what you created earlier).
+		</p>
+		<p>  
+Even if you haven't created a domain yet, you can still name your droplet home/mydomain.com, for example.  DigitalOcean will let you give your droplet any name that is syntactically valid for a hostname (the page says which characters are allowed).   
+	</p>
+	<p>
+		You can <a href="https://www.digitalocean.com/community/questions/how-do-i-change-hostname">change the droplet's hostname</a> later if you like. 
+	</p>
+	<p>
+		<strong>Important:</strong> If you haven't created a domain and 'A' record for the name you gave your droplet yet, you will need the IP address of the droplet to log in to it or access from a web browser.
+	</p>
+		<h3>I have to use a VPC?</h3>
+		<p>
+			A VPC is a 
+			<a href="https://www.digitalocean.com/docs/networking/vpc/">Virtual Private Cloud.</a>
+			A VPC is a way to organize resources wihtin a cloud environment for isolation and better security.  There are many benefits to a VPC which you can read about on DigitalOcean.
+		</p>
+		<p>
+When I created the blindgumption.com server, it did not have to be in a VPC.  DigitalOcean has changed their policy such that now all droplets are created within a VPC.  The good news is the defaults appear to be set so the VPC is publically accessible.  Choose the default VPC and don't worry about VPCs for now. 		
+</p>
+
+		<h2>Initial Server Configuration</h2>
+		<p>
+		 See this <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">
+			DigitalOcean tutorial for adding users, setting up SSH keys, and initializing a firewall.</a>
+		</p>
+		<p>
+			that tutorial is complete though you'll need to click through a link in the tutorial to get to the SSH tutorial.  Don't be intimidated by the idea of generating and using SSH keys.  They will make your life easier and it's just a matter of following the directions.  And if you're getting into tech, you'll really want to start understanding security.
+		</p>
+		<p>
+			Regarding UFW, the firewall used in the tutorial.  It's not going to break anything if you don't use a firewall, but it's a good practice and it's easy to configure.  I recommend doing those steps. 
+		</p>
+
+		<h2>Install and Configure Nginx, the Webserver</h2>
+		<p>
+			We have a server with a user with sudo privileges, time to install a webserver.  Nginx is a very popular option and, you guessed it, there's a good
+			<a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04">tutorial on DigitalOcean for installing Nginx on Ubuntu 20.04.</a> 
+		</p>
+		<p>
+			Now you have a webserver supporting HTTP and the UFW firewall is allowing HTTP traffic.  Back to the security theme, it's time to support HTTPS.
+			<a href="https://www.cloudflare.com/learning/ssl/what-is-https/">What is HTTPS?</a>
+			The article that link takes you to has a lot of detail and many other links to follow to learn as much as you like about HTTPS and related technologies.
+			At a very high level, HTTPS ensures the data between the browser and webserver is encrypted, and ensures the webserver is who it claims to be.   
+		</p>
+		<p>
+		Why is HTTPS important?  Suppose you are logging in to your bank.  You type, for example, "mybank.com" into your browser.  A webpage loads with edit fields asking for your username and password.  You want to be sure the server you're sending your username and password to is really mybank.com and you don't want anyone to be able to read the information as it is sent to the webserver.  That's why you want HTTPS.
+  </p>
+  <p>
+	  Why does my site need HTTPS?  Okay, initially, probably it doesn't.  As mentioned before though, security is a good practice best considered from the very beginning of a project (just like accessibility).  And fortunately, there's a good
+	  <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04">tutorial on DigitalOcean describing how to enable HTTPS on Nginx.</a> 
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+	  That's it.  You have a webserver configured to serve HTML pages using HTTPS for yourdomain (if you already did the create your domain step).  If you followed all the steps in the tutorials, you should be able to, from a browser on your computer, type your domain name into the location field and see your html page load in your browser's window.  
+  </p>
+  <p>
+	  If you've made it this far, and can hear your page load, congratulations!!  It might feel like a lot of work to hear a simple bit of text, but now you have a great foundation to start adding content. 
+  </p>
+  <p>
+	  If it's not working, dont panic!  And don't be hard on yourself.  If you're new to this, you're going to run into problems.  It's natural and the silver lining around the cloud of problems is you'll likely learn a lot more while solveing those problems.  Go back through the DigitalOcean tutorials and make sure you followed all the steps.  And if you're thnking of a career in web development, or something related, problem solving skills are fundamental to your success.  So, rejoice at the opportunity to learn more and sharpen your skills.    
+  </p>
+
+
+	</main>
+	<footer>
+		 <em>Disclaimer: all thoughts, opinions, and attempts at humor on BlindGumption and associated sites are mine.  I do not speak for the blind community. </em>
+		</footer>
+</body>
+</html> 
+
+
