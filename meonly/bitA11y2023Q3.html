@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Udemy for BIT A11y Course, 2023-08</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <p class="navlinks"><a href="../index.html">JSS</a></p>
+        <h1>Analysis of Udemy for BIT A11y Course, 2023-08</h1>
+        <p> Udemy is a SPA (Single Page Application), or at least parts of it are.
+            This results in URLs being a bit odd in places.
+            For example, to get to the signup page, I clicked a button to open a side panel.
+            Then I clicked on the singup button.
+            As you can see below, this resulted in query parameters being inserted in the URL.
+        </p>
+        <ul>
+            <li>
+                <h2>Online Courses - Learn Anything, On Your Schedule | Udemy</h2>
+                <a href="https://www.udemy.com">https://www.udemy.com</a>
+            </li>
+            <li>
+                <h2>Sign Up and Start Learning | Udemy</h2>
+                <a href="https://www.udemy.com/join/signup-popup/?locale=en_US&response_type=html&next=https%3A%2F%2Fwww.udemy.com%2F">https://www.udemy.com/join/signup-popup/?locale=en_US&response_type=html&next=https%3A%2F%2Fwww.udemy.com%2F</a>
+            </li>
+            <li>
+                <h2>Sitemap | Udemy</h2>
+                <a href="https://www.udemy.com/sitemap/">https://www.udemy.com/sitemap/</a>"
+            </li>
+            <li>
+                <h2>Learn about Udemy culture, mission, and careers | About Us</h2>
+                <a href="https://about.udemy.com">https://about.udemy.com</a>
+            </li>
+            <li>
+                <h2>Learn about Udemy’s mission and leadership team | About Udemy</h2>
+                <a href="https://about.udemy.com/company/?locale=en-us#offices">https://about.udemy.com/company/?locale=en-us#offices</a>
+                <p>I got to this link from "Contact Us" from the main Udemy page.
+                    It's an odd title for the contact us page.
+                </p>
+            </li>
+            <li>
+                <h2>Udemy</h2>
+                <a href="https://support.udemy.com/hc/en-us">https://support.udemy.com/hc/en-us</a>
+                <p>This is the support page though you wouldn't know it from the title.
+                    And at least on 2023-08-24,
+                    the h1 heading had the text "en-us".
+                    I suspect there's a bug on the page.
+                </p>
+            </li>
+            <li>
+                <h2>Online Courses - Learn Anything, On Your Schedule | Udemy</h2>
+                <a href="https://www.udemy.com/courses/search/?src=ukw&q=playwright">https://www.udemy.com/courses/search/?src=ukw&q=playwright</a>
+                <p>This is the result of searching for courses on the website testing tool "playwright".
+                    I'm mostly curious how they markup the search results,
+                    especially how well it works for single letter navigation.
+                </p>
+            </li>
+            <li>
+                <h2>Request a free demo | Udemy Business</h2>
+                <a href="https://business.udemy.com/request-demo-mx/?locale=en_US&ref=footer-ad&user_type=visitor&utm_type=mx">https://business.udemy.com/request-demo-mx/?locale=en_US&ref=footer-ad&user_type=visitor&utm_type=mx</a>
+            </li>
+            <li>
+                <h2>Teach Online - Share your knowledge with millions of students across the globe and earn money</h2>
+                <a href="https://www.udemy.com/teaching/?ref=teach_footer">https://www.udemy.com/teaching/?ref=teach_footer</a>
+            </li>
+            <li>
+                <h2>Udemy Accessibility Statement | About Udemy</h2>
+                <a href="https://about.udemy.com/accessibility-statement/?locale=en-us">https://about.udemy.com/accessibility-statement/?locale=en-us</a>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
