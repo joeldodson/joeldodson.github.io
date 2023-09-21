@@ -20,11 +20,20 @@
             Then I clicked on the signup button.
             As you can see below, this resulted in query parameters being inserted in the URL.
         </p>
+        <p>Update, 2023-09-20, FWIW -
+            the signup now appears to be a link on the main page, the side panel seems to be gone.
+            The link I follow is still the same for signup, including all the query parameters.
+            Maybe they got rid of the side panel.
+        </p>
         <h2>Links to the Pages Analyzed Throughout the Course</h2>
         <ul>
             <li>
                 <h3>Online Courses - Learn Anything, On Your Schedule | Udemy</h3>
                 <a href="https://www.udemy.com">https://www.udemy.com</a>
+                <h4>Summary for Page -> Online Courses - Learn Anything, On Your Schedule | Udemy</h4>
+                <p> This is the main page for Udemy.
+                    It has many elements including menus and a collapseable sidebar.
+                </p>
             </li>
             <li>
                 <h3>Sign Up and Start Learning | Udemy</h3>
@@ -79,13 +88,16 @@
         <h3>Successes for Perceivable</h3>
         <h4 id="perceivable-success-1">Perceivable Success 1</h4>
         <ol aria-labelledby="perceivable-success-1">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Online Courses - Learn Anything, On Your Schedule | Udemy </li>
+            <li> Page URL: <a href="https://www.udemy.com"> https://www.udemy.com </a> </li>
+            <li>Success Criteria (SC): Non-text Content </li>
+            <li> Success Criteria Identifier: 1.1.1 </li>
+            <li><p>Description: all images on this page have text descriptions.
+                Starting at the top of the page, I used single letter navigation to quickly navigate through all images.
+                As I type 'g' to go to the next graphic, I hear a very useful description read from the screen reader.
+            </p></li>
+            <li>Assistive Technologies Used: NVDA Screen Reader  </li>
+            <li>Date of Analysis: 2023-09-20 </li>
         </ol>
         <h4 id="perceivable-success-2">Perceivable Success 2</h4>
         <ol aria-labelledby="perceivable-success-2">
@@ -184,23 +196,29 @@
         <h3>Successes for Operable</h3>
         <h4 id="operable-success-1">Operable Success 1</h4>
         <ol aria-labelledby="operable-success-1">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Sitemap | Udemy </li>
+            <li> Page URL: <a href="https://www.udemy.com/sitemap/"> https://www.udemy.com/sitemap </a> </li>
+            <li>Success Criteria (SC): Page Titled </li>
+            <li> Success Criteria Identifier: 2.4.2 </li>
+            <li><p>Description: short and acurate.
+                The title for the sitemap page is Sitemap and includes Udemy after a separation character.
+                This succeeds in accuracy and arranging the most granular information first in the title.
+            </p> </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader  </li>
+            <li>Date of Analysis: 2023-09-20 </li>
         </ol>
         <h4 id="operable-success-2">Operable Success 2</h4>
         <ol aria-labelledby="operable-success-2">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Sitemap | Udemy </li>
+            <li> Page URL: <a href="https://www.udemy.com/sitemap/"> https://www.udemy.com/sitemap </a> </li>
+            <li>Success Criteria (SC): Multiple Ways </li>
+            <li> Success Criteria Identifier: 2.4.5 </li>
+            <li><p>Description: The sitemap can be reached from the footer of any page on Udemy
+                (okay, at least all the pages I've checked.)
+                This is true for several pages (e.g., Accessibility statement, Privacy Policy)
+            </p> </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader  </li>
+            <li>Date of Analysis: 2023-09-20 </li>
         </ol>
         <h4 id="operable-success-3">Operable Success 3</h4>
         <ol aria-labelledby="operable-success-3">
@@ -235,33 +253,55 @@
         <h3>Failures for Operable</h3>
         <h4 id="operable-failure-1">Operable Failure 1</h4>
         <ol aria-labelledby="operable-failure-1">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Online Courses - Learn Anything, On Your Schedule | Udemy </li>
+            <li>Page URL: <a href="https://www.udemy.com">https://www.udemy.com</a> </li>
+            <li>Success Criteria (SC): Heading and Labels </li>
+            <li> Success Criteria Identifier: 2.4.6 </li>
+            <li>
+                <p>Description: This page contains many short descriptions of courses each at an h3 heading.
+                    The end of each course description has a button with label, "Show course details."Nothing in the label associates the button with the course name.</p>
+                <p>I initially had this as a 2.4.4 Link Purpose violation as the label is missing context.
+                    I realized 2.4.4 is specific to links.
+                    2.4.6 is not well defined in WCAG 2.1 itself
+                    but has slightly more in the understanding section indicating lack of clarity could be a violation.
+                </p>
+            </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-20 </li>
         </ol>
         <h4 id="operable-failure-2">Operable Failure 2</h4>
         <ol aria-labelledby="operable-failure-2">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Online Courses - Learn Anything, On Your Schedule | Udemy </li>
+            <li>Page URL: <a href="https://www.udemy.com">https://www.udemy.com</a> </li>
+            <li>Success Criteria (SC): Keyboard</li>
+            <li> Success Criteria Identifier: 2.1.1 </li>
+            <li>
+                <p>Description: This page contains many short descriptions of courses each at an h3 heading.
+                    The end of each course description has a button with label, "Show course details."
+                    with no indication of whether the button will expand a section or initiate a popup.</p>
+                <p>I press the space bar and hear "expanded."
+                    I arrow up and down but cannot find any additional information for the course.</p>
+                    <p>Using the Crhome developer tools, I inspect the element.
+                        It is a &lt;button&gt; element and has a class name 
+                        indicating it will result in some kind of popup window.
+                        I didn't find any indication though of additional information anywhere.
+                    </p>
+            </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-20 </li>
         </ol>
         <h4 id="operable-failure-3">Operable Failure 3</h4>
         <ol aria-labelledby="operable-failure-3">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria (SC): </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Udemy </li>
+            <li> Page URL: <a href="https://support.udemy.com/hc/en-us"> https://support.udemy.com/hc/en-us</a> </li>
+            <li>Success Criteria (SC): Page Titled  </li>
+            <li> Success Criteria Identifier: 2.4.2  </li>
+            <li><p>Description: As you might infer from the URL, this is Udemys' support page.
+                You'd never know that from the title.
+                This page is linked to from udemy.com (and many other pages), it's not a one off zombie page I found lurking in the far off internets of yesteryear.
+            </p>> </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader  </li>
+            <li>Date of Analysis: 2023-09-20  </li>
         </ol>
         <h4 id="operable-failure-4">Operable Failure 4</h4>
         <ol aria-labelledby="operable-failure-4">
