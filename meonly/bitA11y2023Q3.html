@@ -86,6 +86,16 @@
         </ul>
         <h2>Successes and Failures for Perceivable</h2>
         <h3>Successes for Perceivable</h3>
+        <p> I'm calling it done with only two examples of successes for perceivable for these 10 pages.
+            Being totally blind, I'm not sure how to test items like contrast, reflow, and text spacing with only a screen reader.
+            I also didn't want to go to each page with form elements to collect input
+            and list each one as successfully meeting 1.3.5, Identify Input Purpose.
+            Likewise listing each page where graphics all had well done alt attributes as independent examples of success
+            seem to not be within the spirit of the assignment.
+        </p>
+        <p> I guess what I'm concluding is these pages are, for the most part, perceivable.
+            As you can see below, not perfect, but nothing critically wrong.
+        </p>
         <h4 id="perceivable-success-1">Perceivable Success 1</h4>
         <ol aria-labelledby="perceivable-success-1">
             <li>Page Title: Online Courses - Learn Anything, On Your Schedule | Udemy </li>
@@ -101,13 +111,14 @@
         </ol>
         <h4 id="perceivable-success-2">Perceivable Success 2</h4>
         <ol aria-labelledby="perceivable-success-2">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria - Passed: </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Sign Up and Start Learning | Udemy </li>
+            <li> Page URL: <a href="https://www.udemy.com/join/signup-popup/?locale=en_US&response_type=html&next=https%3A%2F%2Fwww.udemy.com%2F"> https://www.udemy.com/join/signup-popup/?locale=en_US&response_type=html&next=https%3A%2F%2Fwww.udemy.com%2F </a></li>
+            <li>Success Criteria - Passed: Identify Input Purpose </li>
+            <li> Success Criteria Identifier: 1.3.5 </li>
+            <li>Description: All form elements on the signup page are clearly identifiable using a screen reader.
+                Additionally, required fields are announced as required by the screen reader.</li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-25 </li>
         </ol>
         <h4 id="perceivable-success-3">Perceivable Success 3</h4>
         <ol aria-labelledby="perceivable-success-3">
@@ -157,43 +168,69 @@
         </ol>
         <h4 id="perceivable-failure-2">Perceivable Failure 2</h4>
         <ol aria-labelledby="perceivable-failure-2">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria - Failed: </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Learn about Udemy culture, mission, and careers | About Us </li>
+            <li> Page URL: <a href="https://about.udemy.com/"> https://about.udemy.com/ </a>" </li>
+            <li>Success Criteria - Failed: Info and Relationships </li>
+            <li> Success Criteria Identifier: 1.3.1 </li>
+            <li>Description: This is another carousel failure.
+                Instead of the previous and next buttons being next to each other, as I usually find them on carousels,
+                the previous button is before the content
+                and the next button is after the content of the carousel.
+                Pressing either button gives no indication of any changes to the page.
+                <p>After pressing the previous button, the content below changes.
+                    After pressing the next button, the content above changes.
+                </p>
+            </li>
+            <li>Assistive Technologies Used: NVDA Screen reader </li>
+            <li>Date of Analysis: 2023-09-25 </li>
         </ol>
         <h4 id="perceivable-failure-3">Perceivable Failure 3</h4>
         <ol aria-labelledby="perceivable-failure-3">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria - Failed: </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Learn about Udemy’s mission and leadership team | About Udemy </li>
+            <li> Page URL: <a href="https://about.udemy.com/company/?locale=en-us#offices"> https://about.udemy.com/company/?locale=en-us#offices </a> </li>
+            <li>Success Criteria - Failed: Audio-only and Video-only (Prerecorded) </li>
+            <li> Success Criteria Identifier: 1.2.1 </li>
+            <li>Description: In the h2, Our Origins, section is a link to a video.
+                The video is hosted on vimeo and, based on inspecting the DOM, is shown as an overlay on the page.
+                The "overlay" appears to be at or near the bottom of the page and there is a close button.
+                The video is a person giving a testimony of the role Udemy had played in their life.
+                It's possible there is closed captioning of the video, but there does not appear to be any transcript available.
+                A deaf blind person would not know anything about the video content.
+            </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-25 </li>
         </ol>
         <h4 id="perceivable-failure-4">Perceivable Failure 4</h4>
         <ol aria-labelledby="perceivable-failure-4">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria - Failed: </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Learn about Udemy’s mission and leadership team | About Udemy </li>
+            <li> Page URL: <a href="https://about.udemy.com/company/?locale=en-us#offices"> https://about.udemy.com/company/?locale=en-us#offices </a> </li>
+            <li>Success Criteria - Failed: Info and Relationships </li>
+            <li> Success Criteria Identifier: 1.3.1 </li>
+            <li>Description: In the h2, Our Origins, section is a link to a video.
+                The video is hosted on vimeo and, based on inspecting the DOM, is shown as an overlay on the page.
+                The "overlay" appears to be at or near the bottom of the page and there is a close button.
+                Activating the link gives no indication anything has happened on the page.
+                I found the video by intentionally looking for a play button. </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-25 </li>
         </ol>
         <h4 id="perceivable-failure-5">Perceivable Failure 5</h4>
         <ol aria-labelledby="perceivable-failure-5">
-            <li>Page Title:</li>
-            <li> Page URL: </li>
-            <li>Success Criteria - Failed: </li>
-            <li> Success Criteria Identifier: </li>
-            <li>Description: </li>
-            <li>Assistive Technologies Used: </li>
-            <li>Date of Analysis: </li>
+            <li>Page Title: Online Courses - Learn Anything, On Your Schedule | Udemy </li>
+            <li> Page URL: <a href="https://www.udemy.com/courses/search/?src=ukw&q=playwright"> https://www.udemy.com/courses/search/?src=ukw&q=playwright </a>" </li>
+            <li>Success Criteria - Failed: Info and Relationships </li>
+            <li> Success Criteria Identifier: 1.3.1 </li>
+            <li>Description: I enter "playwright" in the search text input and hit enter.
+                I know to go to the h1 heading to hear how many results were found.
+                Immediately after the h1 heading is a toggle button labeled
+                "Close filter panel" or "Open filter panel"
+                ostensibly based on the state of the filter panel.
+                I tried to close the filter panel by activating the button to go directly to the first search result.
+                The filter panel seemed to still be open.
+                I activated the button again and the filter panel state appeared unchanged.
+                Regardless the label I hear for that button, the filter panel is there and it takes several key presses to get passed it. </li>
+            <li>Assistive Technologies Used: NVDA Screen Reader </li>
+            <li>Date of Analysis: 2023-09-25 </li>
         </ol>
 
 
