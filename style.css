@@ -26,6 +26,9 @@ code, p, li {
   margin: 1.5em 0;
 }
 
+/* keep p elements from getting bigger in li elements */
+li p {font-size:1em;}
+
 .navlinks, .publishtime {
   font-size:.8em
 
