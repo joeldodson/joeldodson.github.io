@@ -26,6 +26,8 @@ p, li {
   margin: 1em 0;
 }
 
+li p {font-size:1em;}
+
 #gotoMain {
   display: none;
 }
