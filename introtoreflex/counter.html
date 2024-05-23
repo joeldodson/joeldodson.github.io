@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title> Introduction to Reflex- Simple Counter App </title>
+    <link href="style.css"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+    <p id="tod"><a href="../index.html">home</a> <a href="index.html"> Introduction to Reflex</a></p>
+    <h1 id="mainh1"> Simple Counter App </h1>
+    <p>This is taken from the <a href="https://reflex.dev/docs/getting-started/introduction/">Reflex Getting Started Introduction page</a>.</p>
+    <code><pre>
+import reflex as rx
+
+
+class State(rx.State):
+    count: int = 0
+
+    def increment(self):
+        self.count += 1
+
+    def decrement(self):
+        self.count -= 1
+
+
+def index():
+    return rx.hstack(
+        rx.button(
+            "Decrement",
+            color_scheme="ruby",
+            on_click=State.decrement,
+        ),
+        rx.heading(State.count, font_size="2em", custom_attrs={"aria-live":"polite"}),
+        rx.button(
+            "Increment",
+            color_scheme="grass",
+            on_click=State.increment,
+        ),
+        spacing="4",
+    )
+
+
+app = rx.App()
+app.add_page(index)
+
+    </pre></code>
+    <p> <a href="getting_started.html"> back, Getting Started </a>  </p>
+    
+</body>
+
+</html>
